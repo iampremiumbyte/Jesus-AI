@@ -19,7 +19,7 @@ const HomePage = () => {
       </nav>
       {/* main */}
       <div className='main'>
-        <Link href={"/chat"} className='chat-button'>Enter God's Presence</Link>
+        <Link href='/chat' className='chat-button'>Enter Into His Presence</Link>
       </div>
     </div>
   )
