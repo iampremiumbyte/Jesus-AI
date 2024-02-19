@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b6;
+  z-index: -1;
+  transition: .7s;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  z-index: -2;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2em 1em;
+  flex: 1;
+  transition: 1s;
+}
+
+.logo {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.main {
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h1 {
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.prompt-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  transition: 1s;
+}
+
+.prompt-wrap img {
+  cursor: pointer;
+}
+
+.prompt {
+  display: flex;
+  height: 3.4em;
+  overflow: hidden;
+  background-color: rgb(26, 26, 34);
+  width: 30em;
+  border-radius: 50px;
+}
+
+.prompt textarea {
+  width: 88%;
+  padding: 1em .8em;
+  outline: none;
+  border: none;
+  resize: none;
+  overflow: hidden;
+  background-color: rgb(26, 26, 34);
+  color: #fff;
+}
+
+.speaking nav {
+  opacity: 0;
+}
+
+.speaking .prompt-wrap {
+  opacity: 0;
+}
+
+.chat-button {
+  background-color: rgb(199, 74, 2);
+  padding: 1em;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+@media screen and (max-width: 1360px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .main {
+    padding: 0 1.2em;
+  }
+
+  .main h1 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .prompt {
+    width: 90%;
+  }
+}
