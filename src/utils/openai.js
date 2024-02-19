@@ -1,7 +1,7 @@
 import { ChatOpenAI } from "@langchain/openai";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import textToSpeech from "./textToSpeech";
-import { keys } from "../../keys";
+// import { keys } from "../../keys";
 
 const chatModel = new ChatOpenAI({
     openAIApiKey: process.env.OPENAI_API_KEY,
