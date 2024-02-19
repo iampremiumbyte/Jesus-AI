@@ -6,9 +6,9 @@ import { keys } from '../../keys';
 const textToSpeech = async (inputText) => {
     // Set the API key for ElevenLabs API. 
     // Do not use directly. Use environment variables.
-    const API_KEY = keys.ELEVENLABS_API_KEY;
+    const API_KEY = process.env.ELEVENLABS_API_KEY;
     // Set the ID of the voice to be used.
-    const VOICE_ID = keys.VOICE_ID;
+    const VOICE_ID = process.env.VOICE_ID;
 
     // Set options for the API request.
     const options = {
