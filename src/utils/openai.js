@@ -4,7 +4,7 @@ import textToSpeech from "./textToSpeech";
 // import { keys } from "../../keys";
 
 const chatModel = new ChatOpenAI({
-    openAIApiKey: process.env.OPENAI_API_KEY,
+    openAIApiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
     temperature: 1
 });
 
